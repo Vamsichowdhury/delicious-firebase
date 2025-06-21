@@ -10,6 +10,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
+  {path: "/", redirect: "/home" }, // Redirect root path to /home
   { path: "/home", component: Home },
   { path: "/menu", component: Menu },
   { path: "/admin/categories", component: CategoriesDashboard, meta: { requiresAuth: true } },
